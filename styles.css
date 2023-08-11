@@ -1,0 +1,39 @@
+body {
+  position: relative;
+}
+body .game-box {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translate(-50%, -50%);
+}
+body .game-box .game-row {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+body .game-box .game-row .game-cell {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+body .game-box .game-row .game-cell:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.2);
+}
+body .game-box .game-row .game-cell.clicked {
+  pointer-events: none;
+}
+body .game-box .game-row .game-cell.clicked.one {
+  background: green;
+}
+body .game-box .game-row .game-cell.clicked.two {
+  background: red;
+}/*# sourceMappingURL=styles.css.map */

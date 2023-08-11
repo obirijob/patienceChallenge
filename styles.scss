@@ -1,0 +1,44 @@
+body {
+  position: relative;
+  .game-box {
+    //   background: transparentize(black, 0.7);
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translate(-50%, -50%);
+
+    .game-row {
+      display: flex;
+      flex: 1;
+      gap: 10px;
+
+      .game-cell {
+        flex: 1;
+        background: transparentize(black, 0.6);
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background: transparentize(black, 0.2);
+          transform: scale(1.2);
+        }
+
+        &.clicked {
+          pointer-events: none;
+          &.one {
+            background: green;
+          }
+          &.two {
+            background: red;
+          }
+        }
+      }
+    }
+  }
+}
